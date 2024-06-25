@@ -1,16 +1,16 @@
-int led_pin = 12;
-int button = 2;
-void setup()
-{
-  pinMode(led_pin, OUTPUT);
-  pinMode(button, INPUT);
+int ledPin = 9;
+
+void setup() {
 }
 
-void loop(){
-  if(digitalRead(button) == LOW){
-  	digitalWrite(led_pin, LOW);
+void loop() {
+  for (int fadeValue = 0; fadeValue <= 255; fadeValue += 5) {
+    analogWrite(ledPin, fadeValue);
+    delay(30);
   }
-  else {
-  	digitalWrite(led_pin, HIGH);
+
+  for (int fadeValue = 255; fadeValue >= 0; fadeValue -= 5) {
+    analogWrite(ledPin, fadeValue);
+    delay(30);
   }
 }
