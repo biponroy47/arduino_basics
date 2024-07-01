@@ -7,7 +7,7 @@ byte leds = 0;
 
 void updateShiftRegister() {
   digitalWrite(latchPin, LOW);
-  shiftOut(dataPin, clockPin, LSBFIRST, leds);
+  shiftOut(dataPin, clockPin, MSBFIRST, leds);
   digitalWrite(latchPin, HIGH);
 }
 
