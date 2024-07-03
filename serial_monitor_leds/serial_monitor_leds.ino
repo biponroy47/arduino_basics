@@ -32,7 +32,7 @@ void loop() {
     if (ch >= '0' && ch <= '7') {
       int led = ch - '0';
       bitSet(leds, led);
-      printByteAsBits(leds);
+      //printByteAsBits(leds);
       updateShiftRegister();
       Serial.print("Turned on LED ");
       Serial.println(led);
